@@ -2,7 +2,7 @@
 
 ## Description
 
-MAFiA is a powerful tool designed to interact with Fraxtal network. It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, and deploying smart contracts. The assistant embodies the persona of Al Capone, delivering responses with a commanding and cryptic tone.
+**Fraxgent** is a powerful tool designed to interact with Fraxtal network, following the concept of the [PostWeb by Outlier Ventures](http://postweb.io/). It leverages OpenAI's GPT-4o-mini model to provide a conversational interface for users to perform various blockchain operations, such as checking wallet balances, sending transactions, deploying smart contracts, and more.
 
 ## Features
 
@@ -10,6 +10,7 @@ MAFiA is a powerful tool designed to interact with Fraxtal network. It leverages
 - **Wallet Operations**: Check wallet balances and retrieve connected wallet addresses.
 - **Transaction Management**: Send transactions with customizable parameters.
 - **Smart Contract Interaction**: Deploy ERC20 tokens and interact with existing contracts.
+- **API calls**: Using [Frax Finance](https://frax.com/) APIs, you can ask for many data from the platform.
 - **Error Handling**: Robust error handling and feedback for failed operations.
 
 ## Getting Started
@@ -60,10 +61,15 @@ The assistant has access to various tools for performing blockchain operations:
 #### Read Operations
 - **get_balance**: Check wallet balances on the Fraxtal network
 - **get_wallet_address**: Retrieve the connected wallet's address
+- **get_circulatingsupply**: Retrieve the circulating supply for a specific token in Frax (FPI|FPIS|FRAX|FXS|frxETH|sfrxETH)
+- **get_totalsupply**: Retrieve the total supply for a specific token in Frax (FPI|FPIS|FRAX|FXS|frxETH|sfrxETH)
+- **get_pricefortoken**: Retrieve the price (in USD) for a specific token in Frax (FPI|FPIS|FRAX|FXS|frxETH|sfrxETH)
+- **get_tokensavailablefraxswap**: Retrieve the tokens available in FraxSwap to make transactions
+- **get_availablepools**: Retrieve the available staking pools in Frax Finance
 
 #### Write Operations
 - **send_transaction**: Send transactions with customizable parameters including:
-  - Transaction value in ETH
+  - Transaction value in frxETH
   - Custom data for contract interactions
   - Gas price settings
   - EIP-2930 access lists
