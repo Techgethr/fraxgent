@@ -51,3 +51,13 @@ export interface SendTransactionArgs {
    */
   paymasterInput?: `0x${string}`;
 }
+
+/**
+ * Arguments for the get_circulatingsupply tool
+ */
+ export interface GetCirculatingSupplyArgs {
+  /**
+   * The wallet to get the balance of
+   */
+  token: string;
+}

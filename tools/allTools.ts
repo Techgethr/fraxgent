@@ -2,6 +2,8 @@ import { getBalanceTool } from "./getBalance";
 import { getWalletAddressTool } from "./getWalletAddress";
 import { sendTransactionTool } from "./sendTransction";
 import { deployErc20Tool } from "./deployERC20";
+import { getCirculatingSupply } from "./getCirculatingSupply";
+import { getTotalSupply } from "./getTotalSupply";
 
 export interface ToolConfig<T = any> {
   /**
@@ -46,4 +48,12 @@ export const tools: Record<string, ToolConfig> = {
    * Deploy an ERC20 token.
    */
   deploy_erc20: deployErc20Tool,
+  /**
+   * Get the circulating supply for a token
+   */
+   get_circulatingsupply: getCirculatingSupply,
+  /**
+   * Get the total supply for a token
+   */
+   get_totalsupply: getTotalSupply,
 };
