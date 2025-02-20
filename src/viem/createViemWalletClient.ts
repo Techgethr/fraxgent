@@ -1,6 +1,6 @@
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { fraxtalTestnet } from "viem/chains";
+import { fraxtal } from "viem/chains";
 
 /**
  * Creates a new Viem wallet client connected to the Fraxtal network
@@ -26,7 +26,7 @@ export function createViemWalletClient() {
   // Create the wallet client
   return createWalletClient({
     account,
-    chain: fraxtalTestnet,
+    chain: fraxtal,
     transport: http(),
   });
 }

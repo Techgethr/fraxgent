@@ -1,5 +1,5 @@
 import { createPublicClient, http } from "viem";
-import { fraxtalTestnet } from "viem/chains";
+import { fraxtal } from "viem/chains";
 
 /**
  * Creates a new public Viem client connected to the Fraxtal network
@@ -16,7 +16,7 @@ export function createViemPublicClient() {
      *
      * In this case, we're using the Fraxtal network
      */
-    chain: fraxtalTestnet,
+    chain: fraxtal,
 
     /**
      * The transport to use for HTTP requests.
