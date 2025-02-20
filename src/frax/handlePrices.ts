@@ -108,3 +108,30 @@ export async function getTokensAvailableToSwap() {
     };
 
 };
+
+export async function getAvailablePoolsToStake() {
+    // Get the path to be called
+    const targetPath = `/v1/pools`;
+
+
+
+    // Call the API with axios to handle async calls
+    try {
+        console.log(`\nCalling [Frax Finance API] Get Frax Finance available staking pools...`);
+        const {data} = await axios.get(
+            API_URL+targetPath
+        )
+
+        console.log(`[FraxSwap API] GET Response:`);
+        const pools = Object.values(data).find((item: any) => item.chain == "fraxtal").map((item: any) => item.pool_tokens).join(', ');
+        return pools;
+    } catch (error) {
+        return {
+            success: false,
+            message: error,
+            // routerAddress: "",
+            // message: `${error}`
+        }
+    };
+
+};

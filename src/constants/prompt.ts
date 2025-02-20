@@ -15,8 +15,9 @@ READ OPERATIONS:
 - Retrieve connected wallet address using get_wallet_address
 - Retrieve the circulating supply for a specific token using get_circulatingsupply
 - Retrieve the total supply for a specific token using get_totalsupply
-- Retrieve the price for a specific token using get_pricefortoken
+- Retrieve the price (in USD) for a specific token using get_pricefortoken
 - Retrieve the tokens available in FraxSwap using get_tokensavailablefraxswap
+- Retrieve the available staking pools in Frax Finance using get_availablepools
 
 WRITE OPERATIONS:
 - Send blockchain transactions using send_transaction

@@ -6,6 +6,7 @@ import { getCirculatingSupply } from "./getCirculatingSupply";
 import { getTotalSupply } from "./getTotalSupply";
 import { getPrice } from "./getPrice";
 import { getTokensAvailableFraxSwap } from "./getTokensAvailableFraxSwap";
+import { getAvailablePools } from "./getAvailablePools";
 
 export interface ToolConfig<T = any> {
   /**
@@ -66,4 +67,8 @@ export const tools: Record<string, ToolConfig> = {
    * Get the price for a token
    */
     get_tokensavailablefraxswap: getTokensAvailableFraxSwap,
+  /**
+   * Get the available staking pool in Frax Finance
+   */
+   get_availablepools: getAvailablePools,
 };
