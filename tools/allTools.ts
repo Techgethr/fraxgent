@@ -5,6 +5,7 @@ import { deployErc20Tool } from "./deployERC20";
 import { getCirculatingSupply } from "./getCirculatingSupply";
 import { getTotalSupply } from "./getTotalSupply";
 import { getPrice } from "./getPrice";
+import { getTokensAvailableFraxSwap } from "./getTokensAvailableFraxSwap";
 
 export interface ToolConfig<T = any> {
   /**
@@ -61,4 +62,8 @@ export const tools: Record<string, ToolConfig> = {
    * Get the price for a token
    */
    get_pricefortoken: getPrice,
+   /**
+   * Get the price for a token
+   */
+    get_tokensavailablefraxswap: getTokensAvailableFraxSwap,
 };

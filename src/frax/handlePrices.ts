@@ -81,3 +81,30 @@ export async function getPriceForToken(token:string) {
     };
 
 };
+
+export async function getTokensAvailableToSwap() {
+    // Get the path to be called
+    const targetPath = `/v2/fraxswap/tokens?chain=fraxtal`;
+
+
+
+    // Call the API with axios to handle async calls
+    try {
+        console.log(`\nCalling [FraxSwap API] Get FraxSwap available tokens...`);
+        const {data} = await axios.get(
+            API_URL+targetPath
+        )
+
+        console.log(`[FraxSwap API] GET Response:`);
+        const coins = Object.values(data.tokens).map((item: any) => item.symbol).join(', ');
+        return coins;
+    } catch (error) {
+        return {
+            success: false,
+            message: error,
+            // routerAddress: "",
+            // message: `${error}`
+        }
+    };
+
+};
