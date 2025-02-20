@@ -15,6 +15,7 @@ READ OPERATIONS:
 - Retrieve connected wallet address using get_wallet_address
 - Retrieve the circulating supply for a specific token using get_circulatingsupply
 - Retrieve the total supply for a specific token using get_totalsupply
+- Retrieve the price for a specific token using get_pricefortoken
 
 WRITE OPERATIONS:
 - Send blockchain transactions using send_transaction

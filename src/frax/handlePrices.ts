@@ -55,3 +55,29 @@ export async function getTotalSupplyForToken(token:string) {
 
 };
 
+export async function getPriceForToken(token:string) {
+    // Get the path to be called
+    const targetPath = `/v1/priceitems/coin-stats`;
+
+
+
+    // Call the API with axios to handle async calls
+    try {
+        console.log(`\nCalling [Frax Finance API] Get price...`);
+        const {data} = await axios.get(
+            API_URL+targetPath
+        )
+
+        console.log(`[Frax Finance API] GET Response:`);
+        const tokenData = Object.values(data).find((item: any) => item.coin == token);
+        return tokenData.price;
+    } catch (error) {
+        return {
+            success: false,
+            message: error,
+            // routerAddress: "",
+            // message: `${error}`
+        }
+    };
+
+};
